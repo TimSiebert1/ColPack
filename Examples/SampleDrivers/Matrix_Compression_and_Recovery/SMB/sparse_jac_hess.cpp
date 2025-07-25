@@ -11,7 +11,7 @@
 // for time measurements
 
 #include <sys/time.h>
-#include "ColPackHeaders.h"
+#include <ColPack/ColPackHeaders.h>
 
 using namespace ColPack;
 

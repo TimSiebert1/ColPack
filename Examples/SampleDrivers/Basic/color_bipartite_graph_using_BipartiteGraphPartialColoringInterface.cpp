@@ -17,7 +17,7 @@ http://www.cscapes.org/dox/ColPack/html/ ).
 For more information, please visit our webpage http://www.cscapes.org/coloringpage/
 //*/
 
-#include "ColPackHeaders.h"
+#include <ColPack/ColPackHeaders.h>
 
 using namespace ColPack;
 using namespace std;

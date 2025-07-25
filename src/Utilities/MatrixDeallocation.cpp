@@ -4,7 +4,7 @@
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
 
-#include "MatrixDeallocation.h"
+#include <ColPack/Utilities/MatrixDeallocation.h>
 
 int MatrixDeallocation_SparseSolversFormat(unsigned int **ip2_RowIndex, unsigned int **ip2_ColumnIndex, double **dp2_JacobianValue) {
   //Deallocate the arrays

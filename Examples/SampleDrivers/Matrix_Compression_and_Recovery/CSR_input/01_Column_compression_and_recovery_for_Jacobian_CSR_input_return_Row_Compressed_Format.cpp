@@ -18,7 +18,7 @@ Return by recovery routine: a matrix
 double*** dp3_NewValue;
 //*/
 
-#include "ColPackHeaders.h"
+#include <ColPack/ColPackHeaders.h>
 
 using namespace ColPack;
 using namespace std;

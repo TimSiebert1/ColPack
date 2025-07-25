@@ -9,7 +9,7 @@
 
 using namespace std;
 
-#include "current_time.h"
+#include <ColPack/Utilities/current_time.h>
 
 void current_time() {
   time_t curr=time(0);

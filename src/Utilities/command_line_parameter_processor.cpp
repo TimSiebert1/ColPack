@@ -4,7 +4,7 @@
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
 
-#include "command_line_parameter_processor.h"
+#include <ColPack/Utilities/command_line_parameter_processor.h>
 
 void createArgs(int argc, const char* argv[], vector<string>& arg) {
 	for(int i=0;i<argc;i++) arg.push_back(argv[i]);

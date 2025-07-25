@@ -11,7 +11,7 @@ Note: If you got "symbol lookup error ... undefined symbol "
 
 //*/
 
-#include "ColPackHeaders.h"
+#include <ColPack/ColPackHeaders.h>
 
 using namespace ColPack;
 using namespace std;

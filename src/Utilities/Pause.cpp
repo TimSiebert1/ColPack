@@ -5,7 +5,7 @@
 *******************************************************************************/
 
 //Special pause that work on both Windows and UNIX for both C and C++
-#include "Pause.h"
+#include <ColPack/Utilities/Pause.h>
 
 using namespace std;
 

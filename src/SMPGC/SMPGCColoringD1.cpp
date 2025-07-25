@@ -3,7 +3,7 @@
     You should have received a copy of the License. If not, see 
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
-#include "SMPGCColoring.h"
+#include <ColPack/SMPGC/SMPGCColoring.h>
 #include <chrono> //c++11 system time
 #include <random> //c++11 random
 using namespace std;

@@ -4,7 +4,7 @@
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
 
-#include "SMPGCOrdering.h"
+#include <ColPack/SMPGC/SMPGCOrdering.h>
 #include <time.h>  //clock
 using namespace std;
 using namespace ColPack;

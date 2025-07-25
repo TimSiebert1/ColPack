@@ -4,7 +4,7 @@
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
 
-#include "SMPGC.h"
+#include <ColPack/SMPGC/SMPGC.h>
 
 const std::string SMPGC::FORMAT_MM = "MM";
 const std::string SMPGC::FORMAT_BINARY= "BINARY";

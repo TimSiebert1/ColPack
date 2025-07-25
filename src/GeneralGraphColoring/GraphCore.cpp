@@ -5,7 +5,7 @@
 *******************************************************************************/
 
 
-#include "ColPackHeaders.h"
+#include <ColPack/ColPackHeaders.h>
 
 using namespace std;
 

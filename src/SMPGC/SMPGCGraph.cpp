@@ -4,7 +4,7 @@
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
 
-#include "SMPGCGraph.h"
+#include <ColPack/SMPGC/SMPGCGraph.h>
 #include <time.h>   //clock
 using namespace std;
 using namespace ColPack;

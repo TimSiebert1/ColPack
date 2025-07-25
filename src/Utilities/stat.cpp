@@ -1,4 +1,4 @@
-#include "stat.h"
+#include <ColPack/Utilities/stat.h>
 
 vector<string> getListOfGraphs(string location_of_graph_list)
 {

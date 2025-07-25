@@ -5,7 +5,7 @@
 	Run "ColPack.exe"
 //*/
 
-#include "ColPackHeaders.h"
+#include <ColPack/ColPackHeaders.h>
 
 using namespace ColPack;
 using namespace std;

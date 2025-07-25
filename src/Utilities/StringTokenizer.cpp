@@ -9,9 +9,9 @@
 
 using namespace std;
 
-#include "Definitions.h"
+#include <ColPack/Definitions.h>
 
-#include "StringTokenizer.h"
+#include <ColPack/Utilities/StringTokenizer.h>
 
 namespace ColPack
 {
