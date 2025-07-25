@@ -4,7 +4,7 @@
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
 
-#include "SMPGCColoring.h"
+#include <ColPack/SMPGC/SMPGCColoring.h>
 #include <unordered_set>
 #include <unordered_map>
 using namespace std;

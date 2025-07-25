@@ -6,9 +6,9 @@
 
 #include <string>
 
-#include "Definitions.h"
+#include <ColPack/Definitions.h>
 
-#include "File.h"
+#include <ColPack/Utilities/File.h>
 
 using namespace std;
 

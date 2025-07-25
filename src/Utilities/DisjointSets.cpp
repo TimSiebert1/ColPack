@@ -9,9 +9,9 @@
 
 using namespace std;
 
-#include "Definitions.h"
+#include <ColPack/Definitions.h>
 
-#include "DisjointSets.h"
+#include <ColPack/Utilities/DisjointSets.h>
 
 namespace ColPack
 {

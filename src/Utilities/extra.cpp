@@ -7,9 +7,9 @@
 #ifndef EXTRA_CPP
 #define EXTRA_CPP
 
-#include "extra.h"
-#include "Pause.h"
-#include "mmio.h"
+#include <ColPack/Utilities/extra.h>
+#include <ColPack/Utilities/Pause.h>
+#include <ColPack/Utilities/mmio.h>
 #include <cmath>
 
 int WriteMatrixMarket_ADOLCInput(string s_postfix, int i_mode, ...) {

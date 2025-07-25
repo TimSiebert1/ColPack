@@ -16,7 +16,7 @@ unsigned int** ip2_ColumnIndex
 double** dp2_JacobianValue // corresponding non-zero values
 //*/
 
-#include "ColPackHeaders.h"
+#include <ColPack/ColPackHeaders.h>
 
 using namespace ColPack;
 using namespace std;

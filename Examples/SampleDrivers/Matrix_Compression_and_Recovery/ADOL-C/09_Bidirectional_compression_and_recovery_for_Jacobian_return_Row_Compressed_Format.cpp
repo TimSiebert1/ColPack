@@ -10,7 +10,7 @@ Note: If you got "symbol lookup error ... undefined symbol "
   Please make sure that your LD_LIBRARY_PATH contains libColPack.so
 //*/
 
-#include "ColPackHeaders.h"
+#include <ColPack/ColPackHeaders.h>
 
 using namespace ColPack;
 using namespace std;

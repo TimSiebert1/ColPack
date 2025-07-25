@@ -1,0 +1,6 @@
+add_subdirectory(BipartiteGraphBicoloring)
+add_subdirectory(BipartiteGraphPartialColoring)
+add_subdirectory(GeneralGraphColoring)
+add_subdirectory(Recovery)
+add_subdirectory(SMPGC)
+add_subdirectory(Utilities)

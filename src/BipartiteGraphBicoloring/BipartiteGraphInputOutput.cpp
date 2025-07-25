@@ -4,7 +4,7 @@
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
 
-#include "ColPackHeaders.h"
+#include <ColPack/ColPackHeaders.h>
 #include <unordered_map>
 using namespace std;
 

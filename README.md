@@ -192,7 +192,7 @@ After the build, we have already generate an shared library under the `$fullpath
 However if you want to write your own code and use ColPack as an shared library. Then follow the following ways:
 * export library's path to `LD_LIBRARY_PATH`
 * create your own code. 
-* include the relative ColPack header files within your code. `#include "ColPackHeaders.h"`
+* include the relative ColPack header files within your code. `#include <ColPack/ColPackHeaders.h>`
 * added `-ldl path/to/installed/library` and `-I /path/to/installed/include` to the compiler
 * compile the code
 

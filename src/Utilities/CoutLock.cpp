@@ -4,9 +4,9 @@
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
 
-#include "Definitions.h"
+#include <ColPack/Definitions.h>
 
-#include "CoutLock.h"
+#include <ColPack/Utilities/CoutLock.h>
 
 namespace ColPack
 {
