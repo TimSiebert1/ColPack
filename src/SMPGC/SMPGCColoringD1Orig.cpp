@@ -61,7 +61,7 @@ int SMPGCColoring::D1_OMP_GM3P_orig(int nT, int&colors, vector<int>&vtxColors) {
     tim_color += omp_get_wtime();
 
     // phase conflicts detection
-    tim_detect =- omp_get_wtime();
+    tim_detect = -omp_get_wtime();
     conflictQ.resize(Q.size());
     auto qsize = 0;
     #pragma omp parallel
@@ -85,7 +85,7 @@ int SMPGCColoring::D1_OMP_GM3P_orig(int nT, int&colors, vector<int>&vtxColors) {
     tim_detect  += omp_get_wtime();
     
     // phase serial coloring remain part
-    tim_recolor =- omp_get_wtime();
+    tim_recolor = -omp_get_wtime();
     {
         vector<int> Mark; Mark.assign(BufSize, -1);
         for(const auto v : conflictQ){

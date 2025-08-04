@@ -39,7 +39,7 @@ int SMPGCColoring::D1_OMP_HBJP(int nT, int&colors, vector<int>& vtxColors, const
         QQ[i].reserve(N/nT+1+16); //1-odd/even, 16-bus width
 
     // pre-partition the graph
-    tim_Ptt =- omp_get_wtime();
+    tim_Ptt = -omp_get_wtime();
     {
         vector<int> lens(nT, N/nT); for(int i=0; i<N%nT; i++) lens[i]++;
         vector<int> disps(nT+1, 0); for(int i=1; i<nT+1; i++) disps[i]=disps[i-1]+lens[i-1];
@@ -131,7 +131,7 @@ int SMPGCColoring::D1_OMP_HBJP(int nT, int&colors, vector<int>& vtxColors, const
     } //end while 
     tim_MIS += omp_get_wtime();
     
-    tim_Alg2 =- omp_get_wtime();
+    tim_Alg2 = -omp_get_wtime();
     switch(option)
     {
         case HYBRID_GM3P:      hybrid_GM3P  (nT, vtxColors, QQ, local_order); break;
@@ -223,7 +223,7 @@ int SMPGCColoring::D1_OMP_HBMTJP(int nT, int&colors, vector<int>& vtxColors,  co
         QQ[i].reserve(N/nT+1+16); //1-odd/even, 16-bus width
 
     // pre-partition the graph
-    tim_Ptt =- omp_get_wtime();
+    tim_Ptt = -omp_get_wtime();
     {
         vector<int> lens(nT, N/nT); for(int i=0; i<N%nT; i++) lens[i]++;
         vector<int> disps(nT+1, 0); for(int i=1; i<nT+1; i++) disps[i]=disps[i-1]+lens[i-1];
@@ -306,7 +306,7 @@ int SMPGCColoring::D1_OMP_HBMTJP(int nT, int&colors, vector<int>& vtxColors,  co
         n_conflicts+=uncolored_nodes;
     } //end while
 
-    tim_Alg2 =- omp_get_wtime();
+    tim_Alg2 = -omp_get_wtime();
     switch(option)
     {
         case HYBRID_GM3P:      hybrid_GM3P  (nT, vtxColors, QQ, local_order ); break;

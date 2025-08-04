@@ -3,11 +3,13 @@
     You should have received a copy of the License. If not, see 
     <https://github.com/CSCsw/ColPack>
 *******************************************************************************/
-#include <ColPack/BipartiteGraphBicoloring/BipartiteGraphCore.h>
+
 using namespace std;
 
 #ifndef BIPARTITEGRAPHINPUTOUTPUT_H
 #define BIPARTITEGRAPHINPUTOUTPUT_H
+
+#include <ColPack/BipartiteGraphBicoloring/BipartiteGraphCore.h>
 
 namespace ColPack
 {

@@ -31,7 +31,7 @@ int SMPGCColoring::D1_serial(int&colors, vector<int>&vtxColors, const int local_
     vector<int> Q(const_ordered_vertex);  //copied to local memory
 
     // phase pseudo color
-    tim_color =- omp_get_wtime();
+    tim_color = -omp_get_wtime();
     {
         switch(local_order){
             case ORDER_NONE:
@@ -125,7 +125,7 @@ int SMPGCColoring::D1_OMP_GM3P(int nT, int&colors, vector<int>&vtxColors, const 
         QQ[i].reserve(N/nT+1+16); //1-odd/even, 16-bus width
 
     // pre-partition the graph
-    tim_partition =- omp_get_wtime();
+    tim_partition = -omp_get_wtime();
     {
         vector<int> lens(nT, N/nT); for(int i=0; i<N%nT; i++) lens[i]++;
         vector<int> disps(nT+1, 0); for(int i=1; i<nT+1; i++) disps[i]=disps[i-1]+lens[i-1];
@@ -137,7 +137,7 @@ int SMPGCColoring::D1_OMP_GM3P(int nT, int&colors, vector<int>&vtxColors, const 
     
 
     // phase pseudo color
-    tim_color =- omp_get_wtime();
+    tim_color = -omp_get_wtime();
     #pragma omp parallel
     {
         const int tid = omp_get_thread_num();
@@ -176,7 +176,7 @@ int SMPGCColoring::D1_OMP_GM3P(int nT, int&colors, vector<int>&vtxColors, const 
     tim_color  += omp_get_wtime();    
 
     // phase conflicts detection
-    tim_detect =- omp_get_wtime();
+    tim_detect = -omp_get_wtime();
     #pragma omp parallel
     {
         int qsize = 0;
@@ -199,7 +199,7 @@ int SMPGCColoring::D1_OMP_GM3P(int nT, int&colors, vector<int>&vtxColors, const 
     tim_detect  += omp_get_wtime();
    
     // phase serial coloring remain part
-    tim_recolor =- omp_get_wtime();
+    tim_recolor = -omp_get_wtime();
     {
         vector<int> Mark; Mark.assign(BufSize, -1);
         for(int tid=0; tid<nT; tid++){
@@ -300,7 +300,7 @@ int SMPGCColoring::D1_OMP_GMMP(int nT, int&colors, vector<int>&vtxColors, const 
         QQ[i].reserve(N/nT+1+16); //1-odd/even, 16-bus width
 
     // pre-partition the graph
-    tim_partition =- omp_get_wtime();
+    tim_partition = -omp_get_wtime();
     {
         vector<int> lens(nT, N/nT); for(int i=0; i<N%nT; i++) lens[i]++;
         vector<int> disps(nT+1, 0); for(int i=1; i<nT+1; i++) disps[i]=disps[i-1]+lens[i-1];
@@ -454,7 +454,7 @@ int SMPGCColoring::D1_OMP_LB(int nT, int&colors, vector<int>&vtxColors, const in
         QQ[i].reserve(N/nT+1+16); //1-odd/even, 16-bus width
 
     // pre-partition the graph
-    tim_Ptt =- omp_get_wtime();
+    tim_Ptt = -omp_get_wtime();
     {
         vector<int> lens(nT, N/nT); for(int i=0; i<N%nT; i++) lens[i]++;
         vector<int> disps(nT+1, 0); for(int i=1; i<nT+1; i++) disps[i]=disps[i-1]+lens[i-1];
@@ -599,7 +599,7 @@ int SMPGCColoring::D1_OMP_JP(int nT, int&colors, vector<int>&vtxColors, const in
         QQ[i].reserve(N/nT+1+16); //1-odd/even, 16-bus width
 
     // pre-partition the graph
-    tim_Ptt =- omp_get_wtime();
+    tim_Ptt = -omp_get_wtime();
     {
         vector<int> lens(nT, N/nT); for(int i=0; i<N%nT; i++) lens[i]++;
         vector<int> disps(nT+1, 0); for(int i=1; i<nT+1; i++) disps[i]=disps[i-1]+lens[i-1];
@@ -766,7 +766,7 @@ int SMPGCColoring::D1_OMP_MTJP(int nT, int& colors, vector<int>&vtxColors, const
         QQ[i].reserve(N/nT+1+16); //1-odd/even, 16-bus width
 
     // pre-partition the graph
-    tim_Ptt =- omp_get_wtime();
+    tim_Ptt = -omp_get_wtime();
     {
         vector<int> lens(nT, N/nT); for(int i=0; i<N%nT; i++) lens[i]++;
         vector<int> disps(nT+1, 0); for(int i=1; i<nT+1; i++) disps[i]=disps[i-1]+lens[i-1];
