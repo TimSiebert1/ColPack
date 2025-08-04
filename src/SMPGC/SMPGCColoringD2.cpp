@@ -22,7 +22,7 @@ int SMPGCColoring::D2_serial(int&colors, vector<int>& vtxColors, const int local
     colors=0;                       
     vtxColors.assign(N, -1);
 
-    tim_total =- omp_get_wtime();
+    tim_total = -omp_get_wtime();
     {
         vector<int> Mask; Mask.assign(MaxColorCapacity+1, -1);
         
@@ -124,7 +124,7 @@ int SMPGCColoring::D2_OMP_GM3P(int nT, int &colors, vector<int>& vtxColors, cons
     vtxColors.assign(N, -1);
 
     vector<vector<int>> QQ(nT);
-    tim_partition =- omp_get_wtime();
+    tim_partition = -omp_get_wtime();
     {
         vector<int> lens (nT, N/nT); for(int i=0; i<N%nT; i++) lens[i]++;
         vector<int> disps(nT+1,0);   for(int i=1; i<=nT; i++)  disps[i]=disps[i-1]+lens[i-1];
@@ -136,7 +136,7 @@ int SMPGCColoring::D2_OMP_GM3P(int nT, int &colors, vector<int>& vtxColors, cons
     tim_partition += omp_get_wtime();
 
     // phase - Pseudo Coloring
-    tim_color =- omp_get_wtime();
+    tim_color = -omp_get_wtime();
     #pragma omp parallel
     {
         const int tid = omp_get_thread_num();
@@ -186,7 +186,7 @@ int SMPGCColoring::D2_OMP_GM3P(int nT, int &colors, vector<int>& vtxColors, cons
     tim_color  += omp_get_wtime();    
 
     // Phase - Detect Conflicts
-    tim_detect =- omp_get_wtime();
+    tim_detect = -omp_get_wtime();
     #pragma omp parallel
     {
         int num_uncolored=0;
@@ -225,7 +225,7 @@ int SMPGCColoring::D2_OMP_GM3P(int nT, int &colors, vector<int>& vtxColors, cons
     tim_detect  += omp_get_wtime();
    
     // Phase - Resolve Conflicts
-    tim_recolor =- omp_get_wtime();
+    tim_recolor = -omp_get_wtime();
     {
         vector<int> Mark; Mark.assign(BufSize,-1);
         for(int tid=0; tid<nT; tid++){
@@ -330,7 +330,7 @@ int SMPGCColoring::D2_OMP_GMMP(int nT, int &colors, vector<int>&vtxColors, int l
     vtxColors.assign(N, -1);
 
     vector<vector<int>> QQ(nT);
-    tim_partition =- omp_get_wtime();
+    tim_partition = -omp_get_wtime();
     {
         vector<int> lens (nT, N/nT); for(int i=0; i<N%nT; i++) lens[i]++;
         vector<int> disps(nT+1,0);   for(int i=1; i<=nT; i++)  disps[i]=disps[i-1]+lens[i-1];

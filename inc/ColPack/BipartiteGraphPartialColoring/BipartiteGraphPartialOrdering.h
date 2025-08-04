@@ -12,6 +12,8 @@ using namespace std;
 #define RIGHT_PARTIAL_DISTANCE_TWO COLUMN_PARTIAL_DISTANCE_TWO
 #define LEFT_PARTIAL_DISTANCE_TWO ROW_PARTIAL_DISTANCE_TWO
 
+#include <ColPack/BipartiteGraphBicoloring/BipartiteGraphInputOutput.h>
+
 namespace ColPack
 {
 	/** @ingroup group21
