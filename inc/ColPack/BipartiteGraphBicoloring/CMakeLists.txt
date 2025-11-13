@@ -5,4 +5,4 @@ install(FILES
         BipartiteGraphInputOutput.h
         BipartiteGraphOrdering.h
         BipartiteGraphVertexCover.h
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack)
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack/BipartiteGraphBicoloring)

@@ -12,4 +12,4 @@ install(FILES
         stat.h
         StringTokenizer.h
         Timer.h
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack)
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack/Utilities)

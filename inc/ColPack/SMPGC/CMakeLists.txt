@@ -1,7 +1,7 @@
 
 install(FILES
         SMPGC.h
-        SMPGCColering.h
+        SMPGCColoring.h
         SMPGCGraph.h
         SMPGCOrdering.h
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack)
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack/SMPGC)
