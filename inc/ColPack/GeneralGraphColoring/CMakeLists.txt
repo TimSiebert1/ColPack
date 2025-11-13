@@ -5,4 +5,4 @@ install(FILES
         GraphCore.h
         GraphInputOutput.h
         GraphOrdering.h
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack)
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack/GeneralGraphColoring)

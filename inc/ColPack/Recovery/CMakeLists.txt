@@ -3,4 +3,4 @@ install(FILES
         JacobianRecovery1D.h
         JacobianRecovery2D.h
         RecoveryCore.h
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack)
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack/Recovery)
