@@ -10,4 +10,9 @@
 @PACKAGE_INIT@
 set(ColPack_VERSION @COLPACK_VERSION@)
 set_and_check(ColPack_ROOT_DIR "@PACKAGE_CMAKE_INSTALL_PREFIX@")
+
+# find openmp to be able to link against colpack without linking again to openmp
+include(CMakeFindDependencyMacro)
+find_dependency(OpenMP)
+
 include("${CMAKE_CURRENT_LIST_DIR}/ColPackTargets.cmake")
