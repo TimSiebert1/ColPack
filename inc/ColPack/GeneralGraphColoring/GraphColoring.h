@@ -254,7 +254,9 @@ public:
       map<int, vector<pair<int, int>>> *Vertex2ColorCombination_Private,
       map<int, int> *PotentialHub_Private);
 
+#if COLPACK_DEBUG_LEVEL	> 100
   ofstream fout;            // !!!
+#endif 
   int i_ProcessedEdgeCount; // !!!
   /// Build Vertex2ColorCombination from Vertex2ColorCombination_Private
   /**
