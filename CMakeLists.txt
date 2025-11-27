@@ -99,7 +99,7 @@ endif()
 target_include_directories(ColPack_static
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/ColPack>)
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
 
 if(ENABLE_OPENMP)
@@ -127,7 +127,7 @@ set_target_properties(ColPack_shared PROPERTIES
 # For clients of the ColPack target within this project (e.g. examples).
 target_include_directories(ColPack_shared PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>
-    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/ColPack>)
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
 
 # better usage for fetchcontent
