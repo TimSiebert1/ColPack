@@ -225,7 +225,7 @@ endforeach()
 
 # Create files that define the ColPack targets to import into other projects.
 # https://cmake.org/cmake/help/v3.1/manual/cmake-packages.7.html
-install(EXPORT ColPackTargets DESTINATION ${COLPACK_INSTALL_CMAKEDIR})
+install(EXPORT ColPackTargets NAMESPACE ColPack:: DESTINATION ${COLPACK_INSTALL_CMAKEDIR})
 
 # CMake Config file., and version file, which CMake will look for when
 # downstream projects use find_package(ColPack).
