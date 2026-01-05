@@ -498,9 +498,9 @@ namespace ColPack
 		int returnValue = DirectRecover_CoordinateFormat_vectors(g, dp2_CompressedMatrix, uip2_HessianSparsityPattern, RowIndex, ColumnIndex, HessianValue);
 
 		unsigned int numOfNonZeros = RowIndex.size();
-		(*ip2_RowIndex) = (unsigned int*) malloc(numOfNonZeros * sizeof(unsigned int));
-		(*ip2_ColumnIndex) = (unsigned int*) malloc(numOfNonZeros * sizeof(unsigned int));
-		(*dp2_HessianValue) = (double*) malloc(numOfNonZeros * sizeof(double)); //allocate memory for *dp2_HessianValue.
+		(*ip2_RowIndex) = new unsigned int[numOfNonZeros];
+		(*ip2_ColumnIndex) = new unsigned int[numOfNonZeros];
+		(*dp2_HessianValue) = new double[numOfNonZeros];
 
 		for(size_t i=0; i < numOfNonZeros; i++) {
 			(*ip2_RowIndex)[i] = RowIndex[i];
@@ -1338,9 +1338,9 @@ cout<<"*WriteMatrixMarket_ADOLCInput("<<s_postfix<<", 1, uip2_HessianSparsityPat
 		int returnValue = IndirectRecover_CoordinateFormat_vectors(g, dp2_CompressedMatrix, uip2_HessianSparsityPattern, RowIndex, ColumnIndex, HessianValue);
 
 		unsigned int numOfNonZeros = returnValue;
-		(*uip2_RowIndex) = (unsigned int*) malloc(numOfNonZeros * sizeof(unsigned int));
-		(*uip2_ColumnIndex) = (unsigned int*) malloc(numOfNonZeros * sizeof(unsigned int));
-		(*dp2_HessianValue) = (double*) malloc(numOfNonZeros * sizeof(double)); //allocate memory for *dp2_HessianValue.
+		(*uip2_RowIndex) = new unsigned int[numOfNonZeros];
+		(*uip2_ColumnIndex) = new unsigned int[numOfNonZeros];
+		(*dp2_HessianValue) = new double[numOfNonZeros];
 
 		for(size_t i=0; i < numOfNonZeros; i++) {
 			(*uip2_RowIndex)[i] = RowIndex[i];

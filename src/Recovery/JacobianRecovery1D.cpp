@@ -291,9 +291,9 @@ namespace ColPack
 
 		unsigned int numOfNonZeros =  g->GetEdgeCount();
 
-		(*ip2_RowIndex) = (unsigned int*) malloc(numOfNonZeros * sizeof(unsigned int));
-		(*ip2_ColumnIndex) = (unsigned int*) malloc(numOfNonZeros * sizeof(unsigned int));
-		(*dp2_JacobianValue) = (double*) malloc(numOfNonZeros * sizeof(double)); //allocate memory for *dp2_JacobianValue.
+		(*ip2_RowIndex) = new unsigned int[numOfNonZeros];
+		(*ip2_ColumnIndex) = new unsigned int[numOfNonZeros];
+		(*dp2_JacobianValue) = new double[numOfNonZeros]; //allocate memory for *dp2_JacobianValue.
 
 //		return RecoverD2Row_CoordinateFormat_usermem_serial(g, dp2_CompressedMatrix, uip2_JacobianSparsityPattern, ip2_RowIndex, ip2_ColumnIndex, dp2_JacobianValue);
 		return RecoverD2Row_CoordinateFormat_usermem(g, dp2_CompressedMatrix, uip2_JacobianSparsityPattern, ip2_RowIndex, ip2_ColumnIndex, dp2_JacobianValue);
@@ -607,9 +607,9 @@ namespace ColPack
 
 		unsigned int numOfNonZeros = g->GetEdgeCount();
 
-		(*ip2_RowIndex) = (unsigned int*) malloc(numOfNonZeros * sizeof(unsigned int));
-		(*ip2_ColumnIndex) = (unsigned int*) malloc(numOfNonZeros * sizeof(unsigned int));
-		(*dp2_JacobianValue) = (double*) malloc(numOfNonZeros * sizeof(double)); //allocate memory for *dp2_JacobianValue.
+		(*ip2_RowIndex) = new unsigned int[numOfNonZeros];
+		(*ip2_ColumnIndex) = new unsigned int[numOfNonZeros]; 
+		(*dp2_JacobianValue) = new double[numOfNonZeros]; //allocate memory for *dp2_JacobianValue.
 
 //		return RecoverD2Cln_CoordinateFormat_usermem_serial(g, dp2_CompressedMatrix, uip2_JacobianSparsityPattern, ip2_RowIndex, ip2_ColumnIndex, dp2_JacobianValue);
 
